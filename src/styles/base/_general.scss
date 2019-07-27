@@ -1,12 +1,81 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "PT Sans", serif;
+    line-height: normal;
+    color: $mainColor;
+    background-color: #f2f1ed;
+}
 h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
     padding: 0;
 }
-
+a {
+    transition: all 300ms ease;
+}
+.btn {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
 .container {
     @include container();
     @include sm(max-width, rem(510));
     @include md(max-width, rem(690));
     @include lg(max-width, rem(930));
     @include xl(max-width, rem(1110));
+}
+.row {
+    @include row-flex();
+    align-items: center;
+}
+.col-12 {
+    @include col();
+    @include size(12);
+}
+.col-9 {
+    @include col();
+    @include size(12);
+    @include size-lg(9);
+    @include size-md(9);
+}
+.col-5 {
+    @include col();
+    @include size(12);
+    @include size-lg(5);
+    @include size-md(5);
+}
+.col-4 {
+    @include col();
+    @include size(12);
+    @include size-lg(4);
+    @include size-md(4);
+}
+.col-3 {
+    @include col();
+    @include size(12);
+    @include size-lg(3);
+    @include size-md(3);
+}
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+[class*=col-] {
+    z-index: 10;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+img[src=""] {
+    display: none;
+}
+button::-moz-focus-inner {
+    outline: none;
+    border: 0;
+}
+.debug {
+    z-index: 10;
+    @include debug(rgba(0,0,0,0.4), 1px solid #ff0);
 }

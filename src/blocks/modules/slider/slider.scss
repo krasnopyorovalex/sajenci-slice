@@ -1,0 +1,81 @@
+.slider {
+    position: relative;
+    overflow: hidden;
+    .frame {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        font-size: 0;
+        line-height: 0;
+        white-space: nowrap;
+        .slides {
+            display: block;
+            li {
+                display: inline-block;
+                position: relative;
+                width: 100%;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-color: rgba(0, 0, 0, 0.2);
+                }
+                .text_field {
+                    position: absolute;
+                    z-index: 100;
+                    top: 35%;
+                    right: 3rem;
+                    left: 3rem;
+                    font-family: "Roboto Condensed", serif;
+                    line-height: normal;
+                    text-align: center;
+                    color: $whiteColor;
+                    &-title {
+                        font-size: rem(30);
+                    }
+                    &-body {
+                        font-size: rem(22);
+                        .btn_more {
+                            margin: 1rem 0 0 0;
+                            //border: 1px solid $whiteColor;
+                            padding: 5px 20px;
+                            background-color: #c6a770;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .prev, .next {
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: 40px;
+        background-color: rgba(255, 255, 255, .9);
+        margin-top: -36px;
+        cursor: pointer;
+        height: 36px;
+        transition: all 300ms ease;
+        &:hover {
+            background-color: rgba(255, 255, 255, .8);
+        }
+    }
+    .next {
+        text-align: right;
+        right: 0;
+        border-bottom-left-radius: 25px;
+        border-top-left-radius: 25px;
+    }
+    .prev {
+        left: 0;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+    .next svg, .prev svg {
+        width: 36px;
+        height: 36px;
+    }
+}

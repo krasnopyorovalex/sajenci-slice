@@ -1,0 +1,140 @@
+.navigation {
+    font-family: "Roboto Condensed", serif;
+    background-image: url("../img/leaf.jpg");
+    background-repeat: repeat;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(150, 105, 76, .9);
+    }
+    .box_catalog {
+        display: flex;
+        align-items: center;
+        padding: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        background-color: $btnBgCatalog;
+        .btn {
+            color: $mainColor;
+        }
+    }
+    .search {
+        .single_block {
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            input {
+                box-sizing: border-box;
+                width: 100%;
+                border: none;
+                padding: 10px 0 10px 20px;
+                border-radius: 25px;
+                font-size: rem(14);
+                outline: none;
+            }
+            button {
+                color: $whiteColor;
+                position: absolute;
+                background-color: $mainBg;
+                text-transform: uppercase;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                border: none;
+                padding: 10px 20px 10px 50px;
+                border-radius: 25px;
+                font-size: rem(12);
+                letter-spacing: .65px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    nav {
+        ul {
+            li {
+                display: inline-block;
+                a {
+                    color: $whiteColor;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-size: rem(14);
+                    font-weight: 700;
+                    letter-spacing: .65px;
+                    position: relative;
+                    padding: 1.2rem 0;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        bottom: -1px;
+                        left: 0;
+                        height: 2px;
+                        background-color: $whiteColor;
+                        opacity: 0;
+                        transition: all 300ms ease;
+                    }
+                }
+                &:hover {
+                    a:after {
+                        opacity: 1;
+                    }
+                }
+                & + li {
+                    margin: 0 0 0 1.5rem;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: .5rem;
+                        left: -.9rem;
+                        width: 3px;
+                        height: 3px;
+                        background-color: #ffffff;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+.btn_toggle {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 38px;
+    height: 14px;
+    text-align: left;
+    margin: 0 0 0 auto;
+    &:after {
+        right: 0;
+        bottom: 0;
+    }
+    span {
+        position: absolute;
+        top: calc(50% - 1px);
+        left: 0;
+        width: 80%;
+        height: 2px;
+        background-color: $mainColor;
+    }
+    &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $mainColor;
+    }
+}
+.icon_search {
+    @include sprite($search);
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
