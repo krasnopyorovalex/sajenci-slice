@@ -1,10 +1,12 @@
 import { lory } from 'lory.js';
 
 document.addEventListener('DOMContentLoaded', function () {
-    const rewind_percentage = document.querySelector('.js_rewind_percentage');
+    const slider = document.querySelector('.slider_percentage');
 
-    lory(rewind_percentage, {
-        rewind: true,
-        infinite: 1
-    });
+    if (slider) {
+        lory(slider, {
+            rewind: true,
+            infinite: 1
+        });
+    }
 });

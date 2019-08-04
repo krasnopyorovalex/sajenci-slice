@@ -1,0 +1,76 @@
+.products {
+    &_item {
+        position: relative;
+        margin: 0 0 2rem 0;
+        transition: all 300ms ease;
+        background-color: $whiteColor;
+        &:hover {
+            box-shadow: $boxShadow;
+        }
+        .label {
+            top: 1rem;
+        }
+        &-info {
+            padding: 1rem 0.5rem;
+            &-name {
+                text-align: center;
+                font-size: rem(18);
+                a {
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            &-buy {
+                display: flex;
+                align-items: center;
+                margin: 1rem 0 0 0;
+                padding: 1rem 0 0 0;
+                border-top: 1px solid $borderSelect;
+                .price {
+                    flex-grow: 1;
+                    margin: .5rem 0;
+                    text-align: center;
+                    font-size: rem(18);
+                    > span {
+                        font-weight: 700;
+                        font-size: rem(20);
+                        color: $advantageColor;
+                    }
+                }
+            }
+        }
+    }
+}
+.btn_buy {
+    min-width: 90px;
+    border: 1px solid $sliderArrowsColor;
+    padding: 8px 10px 8px 25px;
+    color: $whiteColor;
+    background-color: $sliderArrowsColor;
+    text-decoration: none;
+    border-radius: 45px;
+    outline: none;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: rem(14);
+    svg {
+        position: absolute;
+        top: calc(50% - 13px);
+        left: .8rem;
+        width: 25px;
+        height: 25px;
+        fill: $whiteColor;
+    }
+    &:hover {
+        color: $btnMoreColor;
+        background-color: $whiteColor;
+        cursor: pointer;
+        svg {
+            fill: $btnMoreColor;
+        }
+    }
+}

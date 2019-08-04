@@ -1,0 +1,17 @@
+.sort {
+    background-color: $whiteColor;
+    padding: .8rem .5rem;
+    text-align: right;
+    font-size: rem(14);
+    .single_block {
+        label {
+            margin: 0 .5rem 0 0;
+        }
+        select {
+            border: 1px solid $borderSelect;
+            background-color: $whiteColor;
+            padding: 5px 10px;
+            outline: none;
+        }
+    }
+}

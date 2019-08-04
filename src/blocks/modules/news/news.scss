@@ -1,0 +1,40 @@
+.list {
+    &_item {
+        position: relative;
+        margin: 0 0 2rem 0;
+        background-color: $whiteColor;
+        padding: 0 0 1.5rem 0;
+        &-image {
+            a {
+                display: inline-block;
+                line-height: 0;
+            }
+        }
+        &-date {
+            position: absolute;
+            top: 0;
+            background-color: $dateBg;
+            right: 0;
+            color: $whiteColor;
+            padding: 4px 14px;
+        }
+        &-name {
+            margin: .5rem 0;
+            padding: 0 1rem;
+            a {
+                font-size: rem(20);
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        &-text {
+            padding: 0 1rem;
+            p {
+                font-size: rem(15);
+                line-height: 22px;
+            }
+        }
+    }
+}

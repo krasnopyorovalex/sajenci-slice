@@ -1,0 +1,50 @@
+.advantages {
+    margin: 0 0 1rem 0;
+    .title {
+        margin: 1rem 0 2rem 0;
+    }
+    .row {
+        align-items: stretch;
+    }
+    &_item {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        border: 1px solid $btnBgCatalog;
+        padding: 2rem 1rem 0 1rem;
+        text-align: center;
+        background-color: $whiteColor;
+        box-shadow: $boxShadow;
+        &-head {
+            display: flex;
+            align-items: center;
+            svg {
+                width: 50px;
+                height: 50px;
+                fill: $advantageColor;
+                &.bigger {
+                    width: 70px;
+                }
+            }
+            &-name {
+                flex-grow: 1;
+                margin: 0 0 0 1rem;
+                text-align: right;
+                font-weight: 700;
+                font-size: rem(19);
+            }
+        }
+        &-line {
+            width: 100%;
+            height: 1px;
+            margin: 1rem 0;
+            background-color: $btnBgCatalog;
+        }
+        p {
+            font-size: rem(14);
+            text-align: left;
+        }
+    }
+}

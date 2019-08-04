@@ -1,6 +1,9 @@
-.slider {
+.slider_percentage {
     position: relative;
+}
+.slider_default {
     overflow: hidden;
+    margin: 0;
     .frame {
         position: relative;
         width: 100%;
@@ -10,6 +13,7 @@
         white-space: nowrap;
         .slides {
             display: block;
+            line-height: 0;
             li {
                 display: inline-block;
                 position: relative;
@@ -39,10 +43,7 @@
                     &-body {
                         font-size: rem(22);
                         .btn_more {
-                            margin: 1rem 0 0 0;
-                            //border: 1px solid $whiteColor;
-                            padding: 5px 20px;
-                            background-color: #c6a770;
+                            margin: 1.5rem 0 0 0;
                         }
                     }
                 }
@@ -52,12 +53,10 @@
     .prev, .next {
         display: block;
         position: absolute;
-        top: 50%;
+        top: calc(50% - 18px);
         width: 40px;
         background-color: rgba(255, 255, 255, .9);
-        margin-top: -36px;
         cursor: pointer;
-        height: 36px;
         transition: all 300ms ease;
         &:hover {
             background-color: rgba(255, 255, 255, .8);
@@ -77,5 +76,40 @@
     .next svg, .prev svg {
         width: 36px;
         height: 36px;
+        vertical-align: middle;
+    }
+}
+.btn_more {
+    display: inline-block;
+    min-width: 120px;
+    margin: 2rem 0 0 0;
+    padding: 12px 14px 12px 30px;
+    transition: all 300ms ease;
+    font-size: rem(14);
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 45px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: $btnMoreColor;
+    background: $whiteColor;
+    svg {
+        position: absolute;
+        top: 13px;
+        left: 20px;
+        width: 14px;
+        height: 14px;
+        transition: all 300ms ease;
+        fill: $btnMoreColor;
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: $sliderArrowsColor;
+        color: $whiteColor;
+        svg {
+            fill: $whiteColor;
+            right: 18px;
+        }
     }
 }

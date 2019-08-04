@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>New Page</title>
+        <title>Товар</title>
         <meta name="theme-color" content="#c9e0e04d">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -26,10 +26,30 @@
         <link rel="stylesheet" href="../styles/main.css">
     </head>
     <body>
-        @@include(../blocks/modules/header/header.html)
-        <h1>New Page</h1>
-        @@include(../blocks/modules/footer/footer.html)
-        <script src="../js/pageB.js"></script>
+<!--        @@include("../../blocks/modules/debug/debug.html")-->
+        @@include("../../blocks/modules/header/header.html")
+        @@include("../../blocks/modules/navigation/navigation.html")
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        @@include("../../blocks/modules/breadcrumbs/breadcrumbs.html")
+                        <div class="text">
+                            <h2>Персик: описание, полезные свойства и противопоказания</h2>
+                            <p>Персик (Prunus persica) - растение подрода Миндаль, рода Слива, семейства Розовые. Из этого ясно, что персик (если вести речь о самом растении, а не о плодах, то правильнее его называть персиковым деревом) является близким родственником сливы и еще более близким - миндалю.</p>
+                            <h2>Происхождение и распространение персика</h2>
+                            <p>Ученые достоверно не выяснили, где географическая родина персика. Есть версия, что это окультуренный вид Prunus davidiana Franch., встречающегося в Северном Китае. Известно также, что в садах Европы персик стали выращивать еще в I веке н.э. (в Италии). В настоящее время культивируется во всех регионах субтропического пояса и в более теплых частях умеренного пояса. Однако основным производителем остается Китай. Россия же по выращиванию персика не попадает даже в двадцатку ведущих производителей, что, в общем-то, объясняется очень ограниченной площадью, на которой персик может давать хорошие урожаи (юг Краснодарского и Ставропольского краев).</p>
+                            <h3>Биологическое описание персика</h3>
+                            <p>Персиковое дерево высотой до 10 м, Листья ланцетовидные, зубчатые.</p>
+                            <p>Цветки диаметром около 3 см, сидячие или на коротких черешках, розовые или красные. Дерево зацветает еще до распускания листьев.</p>
+                            <p>Плод персикового дерева по форме может быть самым различным (в зависимости от сорта): от классических шарообразных до плоских или удлиненно-эллиптических. Характерный признак - наличие бороздки на одной стороне. Косточка у персика морщинисто-бороздчатая с ямками и заостренной верхушкой.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        @@include("../../blocks/modules/footer/footer.html")
+        <script src="../js/main.js"></script>
         <script src="../js/vendor.js"></script>
     </body>
 </html>

@@ -1,0 +1,269 @@
+.decorate {
+    position: relative;
+    padding: 1.5rem;
+    background-color: $whiteColor;
+    box-shadow: $boxShadow;
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 8px;
+        right: 8px;
+        bottom: 8px;
+        left: 8px;
+        border: 1px solid rgba(84, 175, 58, .5);
+        transition: all 300ms ease;
+    }
+    &:hover {
+        &:before {
+            border: 1px solid rgba(84, 175, 58, .9);
+        }
+    }
+}
+.popular_slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    white-space: nowrap;
+    margin: 0;
+    .frame {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        font-size: 0;
+        line-height: 0;
+        white-space: nowrap;
+        .slides {
+            display: block;
+            line-height: 0;
+            li {
+                box-sizing: border-box;
+                display: inline-block;
+                z-index: 10;
+                overflow: hidden;
+                text-align: center;
+                > a {
+                    display: inline-block;
+                }
+                img {
+                    line-height: 0;
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+    .prev, .next {
+        display: inline-block;
+        position: absolute;
+        bottom: 3.5rem;
+        vertical-align: middle;
+        border: 1px solid $sliderArrowsColor;
+        border-radius: 50%;
+        &:hover {
+            overflow: hidden;
+            cursor: pointer;
+        }
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .prev {
+        left: 10%;
+    }
+    .next {
+        right: 10%;
+    }
+    &-info {
+        z-index: 10;
+        margin: 1rem 0 0 0;
+        line-height: normal;
+        text-align: center;
+        white-space: normal;
+        .name {
+            display: block;
+            z-index: 10;
+            margin: 0 0 .5rem 0;
+            font-size: rem(22);
+            text-align: left;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .more_box {
+            margin: 1rem 0;
+        }
+        p {
+            display: inline-block;
+            font-size: rem(15);
+            line-height: 20px;
+        }
+    }
+}
+.btn_more, .btn_send {
+    min-width: 140px;
+    margin: 0 1rem;
+    border: 1px solid $sliderArrowsColor;
+    padding: 8px 10px 8px 20px;
+    color: $whiteColor;
+    background-color: $sliderArrowsColor;
+    text-decoration: none;
+    font-size: rem(13);
+    &:hover {
+        color: $btnMoreColor;
+        background-color: $whiteColor;
+        svg {
+            fill: $btnMoreColor;
+        }
+    }
+    svg {
+        top: calc(50% - 5px);
+        width: 10px;
+        height: 10px;
+        fill: $whiteColor;
+    }
+}
+.label {
+    position: absolute;
+    text-transform: uppercase;
+    top: 2rem;
+    left: 0;
+    padding: 8px 18px;
+    line-height: normal;
+    color: $whiteColor;
+    > div {
+        position: relative;
+    }
+}
+.label_discount {
+    background-color: rgba(148, 206, 45, .9);
+}
+.label_action {
+    background-color: rgba(233, 56, 36, .9);
+}
+.label_new {
+    background-color: rgba(84, 175, 58, .9);
+}
+.articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .btn_box {
+        display: block;
+        width: 100%;
+        margin: 1.3rem 0 0 0;
+        text-align: center;
+        .btn {
+            min-width: 200px;
+        }
+    }
+    &_item {
+        display: flex;
+        align-items: flex-start;
+        z-index: 10;
+        & + .articles_item {
+            margin-top: 1rem;
+        }
+        &-image {
+            margin: 0 10px 0 0;
+        }
+        &-preview {
+            .name {
+                display: block;
+                margin: 0 0 8px 0;
+                text-decoration: none;
+                font-weight: 700;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .body {
+                font-size: rem(14);
+                line-height: 20px;
+            }
+        }
+    }
+}
+.form_callback {
+    z-index: 100;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: $whiteColor;
+    .title {
+        margin: 0 0 1rem 0;
+    }
+    .single_block {
+        margin: 2rem 0 0 0;
+    }
+}
+.single_block {
+    display: block;
+    width: 100%;
+    input, textarea {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 100%;
+        border: 1px solid rgba(84, 175, 58, .5);
+        padding: 16px 16px;
+        outline: none;
+    }
+    textarea {
+        min-height: 100px;
+    }
+    .error {
+        font-size: rem(13);
+        display: none;
+    }
+    &.i_agree {
+        label {
+            display: inline-block;
+            position: relative;
+            font-size: rem(14);
+            line-height: normal;
+            padding-left: 30px;
+            text-align: left;
+            &:after {
+                @include sprite($check);
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 6px;
+                opacity: 0;
+            }
+            &:before {
+                @include sprite($uncheck);
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 6px;
+            }
+        }
+        input {
+            display: none;
+            margin-left: 0;
+            &:checked + label:after {
+                opacity: 1;
+            }
+        }
+    }
+}
+.btn_send {
+    border-radius: 25px;
+    font-size: rem(16);
+    text-transform: uppercase;
+    min-width: 180px;
+    &:hover {
+        cursor: pointer;
+    }
+    svg {
+        position: absolute;
+        top: calc(50% - 10px);
+        left: 1rem;
+        width: 20px;
+        height: 20px;
+    }
+}

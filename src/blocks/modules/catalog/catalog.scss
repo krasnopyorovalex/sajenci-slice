@@ -1,0 +1,107 @@
+.catalog {
+    font-family: "Roboto Condensed", serif;
+    .title {
+        margin: 0 0 1rem 0;
+        text-align: center;
+    }
+    &_item {
+        position: relative;
+        margin: 1rem 0;
+        padding: 2rem 0 2rem 2rem;
+        background-color: $whiteColor;
+        box-shadow: $boxShadow;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: 0;
+            bottom: 10px;
+            left: 10px;
+            transition: all 300ms ease;
+            border-left: 1px solid rgba(84, 175, 58, .5);
+            border-top: 1px solid rgba(84, 175, 58, .5);
+            border-bottom: 1px solid rgba(84, 175, 58, .5);
+        }
+        &:hover {
+            &:before {
+                border-color: rgba(84, 175, 58, .9);
+            }
+        }
+        &-name {
+            position: relative;
+            z-index: 10;
+            padding: 0 0 0 50px;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: rem(20);
+            &:before {
+                content: "";
+                position: absolute;
+                top: calc(50% - 2px);
+                left: 0;
+                width: 33px;
+                height: 4px;
+                background-color: $linkColor;
+            }
+        }
+        &-list {
+            margin: 1rem 0 0 0;
+            ul {
+                margin: 0 0 0 36px;
+                padding: 1rem 0 1rem 1rem;
+                list-style: none;
+                li {
+                    & + li {
+                        padding-top: .6rem;
+                    }
+                    a {
+                        position: relative;
+                        font-size: rem(14);
+                        text-transform: uppercase;
+                        color: $mainColor;
+                        text-decoration: none;
+                        &:hover {
+                            color: $linkColor;
+                            text-decoration: underline;
+                        }
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: -30px;
+                            width: 12px;
+                            height: 1px;
+                            background-color: $linkColor;
+                        }
+                    }
+                }
+            }
+        }
+        &-image {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -50%);
+        }
+        .btn_catalog {
+            display: block;
+            text-align: center;
+            .btn_more {
+                color: $whiteColor;
+                background-color: $sliderArrowsColor;
+                text-decoration: none;
+                border: 1px solid $sliderArrowsColor;
+                svg {
+                    fill: $whiteColor;
+                }
+                &:hover {
+                    color: $btnMoreColor;
+                    background-color: $whiteColor;
+                    svg {
+                        fill: $btnMoreColor;
+                    }
+                }
+            }
+        }
+    }
+}

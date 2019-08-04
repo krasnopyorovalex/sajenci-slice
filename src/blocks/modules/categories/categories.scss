@@ -1,0 +1,70 @@
+.categories {
+    background-color: $whiteColor;
+    ul {
+        list-style: none;
+        > li {
+            position: relative;
+            a {
+                box-sizing: border-box;
+                display: block;
+                width: 100%;
+                padding: .8rem 1.2rem .8rem 1.5rem;
+                color: $mainColor;
+                text-decoration: none;
+                &:after {
+                    @include sprite($triangle);
+                    content: "";
+                    position: absolute;
+                    top: calc(50% - 6px);
+                    right: 0;
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: calc(50% - 3px);
+                    left: .6rem;
+                    width: 6px;
+                    height: 6px;
+                    transition: all 300ms ease;
+                    border-radius: 50%;
+                    background-color: $sliderArrowsColor;
+                }
+            }
+            &.active > a, & > a:hover {
+                background-color: $sliderArrowsColor;
+                color: $whiteColor;
+                &:before {
+                    background-color: $whiteColor;
+                }
+            }
+            &.active > a {
+                &:after {
+                    top: 18px;
+                }
+                &:before {
+                    top: 22px;
+                }
+            }
+            & + li {
+                border-top: 1px solid $borderSelect;
+            }
+            ul {
+                margin: 0;
+                border-top: 1px solid $borderSelect;
+                li {
+                    a {
+                        font-size: rem(14);
+                        padding: .8rem 1.2rem .8rem 2.5rem;
+                        &:before {
+                            top: 50%;
+                            left: 1.5rem;
+                            width: 6px;
+                            height: 2px;
+                            background-color: $sliderArrowsColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

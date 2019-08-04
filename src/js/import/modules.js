@@ -1,4 +1,10 @@
 import "%modules%/header/header";
 import "%modules%/navigation/navigation";
 import "%modules%/slider/slider";
+import "%modules%/advantages/advantages";
+import "%modules%/catalog/catalog";
+import "%modules%/popular/popular";
+import "%modules%/categories/categories";
+import "%modules%/items/items";
+import "%modules%/product/product";
 import "%modules%/footer/footer"

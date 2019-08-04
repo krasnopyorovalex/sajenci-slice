@@ -1,0 +1,34 @@
+.pagination {
+    background-color: $whiteColor;
+    padding: .8rem 0;
+    ul {
+        margin: 0;
+        text-align: center;
+        li {
+            display: inline-block;
+            a {
+                border: 1px solid $linkColor;
+                padding: 5px 11px;
+                text-decoration: none;
+                border-radius: 50%;
+            }
+            & + li {
+                margin: 0 0 0 .4rem;
+            }
+            &:hover {
+                a {
+                    background-color: $paginationActive;
+                    color: $whiteColor;
+                }
+            }
+            &.active {
+                border: 1px solid $linkColor;
+                padding: 3px 11px;
+                color: $whiteColor;
+                text-decoration: none;
+                background-color: $paginationActive;
+                border-radius: 50%;
+            }
+        }
+    }
+}
