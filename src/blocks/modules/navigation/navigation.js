@@ -1,11 +1,13 @@
-const hamburger = document.querySelector(".box_catalog .btn_toggle");
-const list = document.querySelector(".box_catalog-list");
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".box_catalog .btn_toggle");
+    const list = document.querySelector(".box_catalog-list");
 
-if (hamburger) {
-    hamburger.addEventListener('click', function() {
-        slideToggle(list, 300);
-    });
-}
+    if (hamburger) {
+        hamburger.addEventListener('click', function() {
+            slideToggle(list, 300);
+        });
+    }
+});
 
 let slideUp = (target, duration=500) => {
     target.style.transitionProperty = 'height, margin, padding';

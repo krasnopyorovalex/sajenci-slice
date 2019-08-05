@@ -7,4 +7,5 @@ import "%modules%/popular/popular";
 import "%modules%/categories/categories";
 import "%modules%/items/items";
 import "%modules%/product/product";
+import "%modules%/callback/callback";
 import "%modules%/footer/footer"

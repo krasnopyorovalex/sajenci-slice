@@ -87,10 +87,7 @@
             display: block;
             text-align: center;
             .btn_more {
-                color: $whiteColor;
-                background-color: $sliderArrowsColor;
-                text-decoration: none;
-                border: 1px solid $sliderArrowsColor;
+                min-width: 190px;
                 svg {
                     fill: $whiteColor;
                 }

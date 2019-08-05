@@ -1,0 +1,42 @@
+.form_callback-popup {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .5);
+    }
+    form {
+        z-index: 10;
+        max-width: 380px;
+        margin: 10% auto 0;
+        .title {
+            text-align: center;
+        }
+        .single_block {
+            text-align: center;
+        }
+    }
+}
+.close {
+    position: absolute;
+    top: -40px;
+    right: -18px;
+    svg {
+        width: 36px;
+        height: 36px;
+        fill: $bgClose;
+        cursor: pointer;
+    }
+}

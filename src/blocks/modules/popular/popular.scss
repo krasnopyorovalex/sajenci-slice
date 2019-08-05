@@ -196,13 +196,11 @@
     .title {
         margin: 0 0 1rem 0;
     }
-    .single_block {
-        margin: 2rem 0 0 0;
-    }
 }
 .single_block {
     display: block;
     width: 100%;
+    margin: 2rem 0 0 0;
     input, textarea {
         box-sizing: border-box;
         display: inline-block;
@@ -215,8 +213,8 @@
         min-height: 100px;
     }
     .error {
-        font-size: rem(13);
         display: none;
+        font-size: rem(13);
     }
     &.i_agree {
         label {

@@ -20,6 +20,40 @@
     margin: 0 0 1rem 0;
     padding: 1rem;
     background-color: $whiteColor;
+    .btn {
+        width: 100%;
+    }
+    .single_block {
+        display: inline-block;
+        width: 100%;
+        .count {
+            display: inline-block;
+            width: auto;
+            border: none;
+            padding: 6px 0;
+        }
+        div {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid rgba(84, 175, 58, 0.5);
+            vertical-align: middle;
+            text-align: center;
+            &.minus {
+                margin: 0 .5rem 0 0;
+            }
+            &.plus {
+                margin: 0 0 0 .5rem;
+            }
+            &.minus, &.plus {
+                font-size: rem(24);
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
     &-price {
         width: 100%;
         margin: .5rem 0;
@@ -28,36 +62,6 @@
             font-weight: 700;
             font-size: rem(20);
             color: $advantageColor;
-        }
-    }
-    .btn {
-        width: 100%;
-    }
-    form {
-        width: 100%;
-        .single_block {
-            display: inline-block;
-            width: auto;
-            div {
-                display: inline-block;
-                font-size: rem(28);
-                vertical-align: middle;
-                line-height: normal;
-                &.minus {
-                    margin: 0 .5rem 0 0;
-                }
-                &.plus {
-                    margin: 0 0 0 .5rem;
-                }
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-            input {
-                display: inline-block;
-                //border: none;
-                padding: 6px 0;
-            }
         }
     }
 }
