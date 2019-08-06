@@ -8,4 +8,5 @@ import "%modules%/categories/categories";
 import "%modules%/items/items";
 import "%modules%/product/product";
 import "%modules%/callback/callback";
+import "%modules%/tabs/tabs";
 import "%modules%/footer/footer"

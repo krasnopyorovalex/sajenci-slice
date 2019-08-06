@@ -6,6 +6,16 @@ header {
             max-width: 160px;
         }
     }
+    .col-9 {
+        @include size(7);
+        @include size-lg(9);
+        @include size-md(9);
+    }
+    .col-3 {
+        @include size(5);
+        @include size-lg(3);
+        @include size-md(3);
+    }
     a {
         color: $mainColor;
         text-decoration: none;
@@ -17,8 +27,18 @@ header {
     align-items: center;
     justify-content: space-between;
     > div {
-        cursor: pointer;
+        @include lg(display, block);
+        display: none;
         margin: .5rem 0;
+        cursor: pointer;
+        .icon_box {
+            display: inline-block;
+            margin: 0 5px 0 0;
+            padding: 5px 7px 6px 7px;
+            border-radius: 50%;
+            background-color: $mainBg;
+            vertical-align: middle;
+        }
         >span {
             position: relative;
             &:after {
@@ -33,23 +53,20 @@ header {
                 background-repeat: repeat-x;
             }
         }
-        .icon_box {
-            display: inline-block;
-            margin: 0 5px 0 0;
-            padding: 5px 7px 6px 7px;
-            border-radius: 50%;
-            background-color: $mainBg;
-            vertical-align: middle;
-        }
         &.cart {
+            @include sm(font-size, rem(16));
+            @include lg(margin, 0);
+            display: block;
             position: relative;
             z-index: 10;
+            margin: 0 0 0 auto;
             padding: 5px 30px 5px 10px;
             background-color: $mainBg;
             border-radius: 25px;
             color: #ffffff;
             background-image: url("../img/leaf.jpg");
             background-repeat: repeat;
+            font-size: rem(14);
             &:before {
                 content: "";
                 position: absolute;

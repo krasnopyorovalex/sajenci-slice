@@ -56,8 +56,8 @@ a {
     min-width: 210px;
 }
 figure {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 .container {
     @include container();
@@ -110,6 +110,10 @@ figure {
 .as_center {
     align-self: center;
 }
+.content {
+    @include lg(margin, 2rem 0);
+    margin: 0 0 1rem 0;
+}
 .icon {
     display: inline-block;
     vertical-align: middle;
@@ -146,6 +150,6 @@ button::-moz-focus-inner, button {
     border: 0;
 }
 .debug {
-    z-index: 100;
+    z-index: 200;
     @include debug(rgba(0,0,0,0.4), 1px solid #ff0);
 }

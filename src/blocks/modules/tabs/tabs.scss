@@ -1,0 +1,39 @@
+.tab-contents {
+    margin: 2rem 0 0 0;
+}
+.tab-nav {
+    margin: 0;
+    padding: 0;
+}
+.tab-link {
+    @include lg(padding, 10px 20px);
+    @include lg(display, inline-block);
+    @include lg(margin-right, 5px);
+    @include lg(border, none);
+    display: block;
+    padding: 10px 20px;
+    transition: all 300ms ease;
+    margin-right: 0;
+    color: $whiteColor;
+    background-color: $tabBg;
+    border-bottom: 1px solid #ccc;
+    &:hover {
+        cursor: pointer;
+    }
+    &:last-child {
+        margin-right: 0;
+        border: none;
+    }
+    &.is_active {
+        background-color: $tabBgActive;
+    }
+}
+.tab-content {
+    display: none;
+    background-color: $whiteColor;
+    min-height: 100px;
+    &.is_active {
+        display: block;
+        padding: 1rem;
+    }
+}

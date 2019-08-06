@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector(".box_catalog .btn_toggle");
+    const hamburger = document.querySelector(".box_catalog");
     const list = document.querySelector(".box_catalog-list");
 
     if (hamburger) {
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-let slideUp = (target, duration=500) => {
+const slideUp = (target, duration=500) => {
     target.style.transitionProperty = 'height, margin, padding';
     target.style.transitionDuration = duration + 'ms';
     target.style.boxSizing = 'border-box';
@@ -34,7 +34,7 @@ let slideUp = (target, duration=500) => {
     }, duration);
 };
 
-let slideDown = (target, duration=500) => {
+const slideDown = (target, duration=500) => {
     target.style.removeProperty('display');
     let display = window.getComputedStyle(target).display;
 
@@ -66,7 +66,7 @@ let slideDown = (target, duration=500) => {
         target.style.removeProperty('transition-property');
     }, duration);
 };
-let slideToggle = (target, duration = 500) => {
+const slideToggle = (target, duration = 500) => {
     if (window.getComputedStyle(target).display === 'none') {
         return slideDown(target, duration);
     }

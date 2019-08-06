@@ -17,7 +17,10 @@ footer {
         align-items: flex-start;
     }
     .title {
-        margin: 0 0 1.5rem 0;
+        @include lg(text-align, left);
+        @include lg(margin, 0 0 1.5rem 0);
+        text-align: center;
+        margin: 0 0 1rem 0;
     }
     .copyright {
         display: inline-block;
@@ -34,7 +37,13 @@ footer {
         list-style: none;
         margin: 1rem 0;
         li {
+            @include lg(display, inline-block);
+            @include lg(width, auto);
+            @include lg(text-align, left);
+            text-align: center;
+            display: block;
             position: relative;
+            width: 100%;
             & + li {
                 margin: .4rem 0 0 0;
             }
@@ -59,7 +68,8 @@ footer {
     }
     .socials {
         ul {
-            text-align: right;
+            @include lg(text-align, right);
+            text-align: center;
             li {
                 display: inline-block;
                 & + li {
@@ -79,7 +89,10 @@ footer {
     }
 }
 .developer {
-    text-align: right;
+    @include lg(text-align, right);
+    @include lg(margin, 0);
+    text-align: center;
+    margin: 1rem 0 0 0;
     &_link {
         display: inline-block;
         margin-right: 4px;
@@ -96,6 +109,7 @@ footer {
     margin: 1rem 0;
     background-color: $mainBg;
 }
-.text_right {
-    text-align: right;
+.text_right, .text_right .title {
+    @include lg(text-align, right);
+    text-align: center;
 }

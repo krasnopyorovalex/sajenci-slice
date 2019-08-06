@@ -1,8 +1,10 @@
 .navigation {
+    @include lg(margin, 2rem 0);
     background-image: url("../img/leaf.jpg");
     background-repeat: repeat;
     position: relative;
     z-index: 110;
+    margin: 1rem 0 0 0;
     &:before {
         content: "";
         position: absolute;
@@ -12,6 +14,14 @@
         left: 0;
         background-color: rgba(150, 105, 76, .9);
     }
+    .col-3 {
+        @include size-lg(3);
+        @include size(8);
+    }
+    .col-6 {
+        @include size-lg(6);
+        @include size(4);
+    }
     .box_catalog {
         display: flex;
         align-items: center;
@@ -20,8 +30,20 @@
         font-weight: 700;
         text-transform: uppercase;
         background-color: $btnBgCatalog;
+        &:hover {
+            cursor: pointer;
+        }
         .btn {
-            color: $mainColor;
+            @include lg(color, $mainColor);
+            @include lg(font-size, rem(16));
+            @include lg(order, 0);
+            order: 1;
+            color: $whiteColor;
+            font-size: rem(14);
+        }
+        .btn_toggle {
+            @include lg(margin, 0 0 0 auto);
+            margin: 0 auto 0 0;
         }
         &-list {
             box-sizing: border-box;
@@ -31,8 +53,8 @@
             left: 0;
             width: 100%;
             overflow: hidden;
-            background-color: $btnBgCatalog;
             transition: all 300ms ease;
+            background-color: $btnBgCatalog;
             ul {
                 margin: 0;
                 list-style: none;
@@ -41,18 +63,8 @@
                 li {
                     position: relative;
                     margin: .3rem 0 0 0;
-                    a {
-                        display: block;
-                        padding: .3rem 0 .3rem 2rem;
-                        text-transform: none;
-                        color: $whiteColor;
-                        text-decoration: none;
-                    }
                     &:hover {
                         text-decoration: underline;
-                    }
-                    & + li {
-                        border-top: 1px solid $sliderArrowsColor;
                     }
                     &:before {
                         content: "";
@@ -64,12 +76,35 @@
                         border-radius: 50%;
                         background-color: $whiteColor;
                     }
+                    a {
+                        display: block;
+                        padding: .3rem 0 .3rem 2rem;
+                        text-transform: none;
+                        color: $whiteColor;
+                        text-decoration: none;
+                    }
+                    & + li {
+                        border-top: 1px solid $sliderArrowsColor;
+                    }
                 }
             }
         }
     }
     nav {
+        @include lg(padding, 0);
+        padding: .8rem 1.2rem .8rem 1.5rem;
+        .btn_toggle {
+            @include lg(display, none);
+            display: block;
+            margin: 0 0 0 auto;
+            span, &:before, &:after {
+                background-color: $whiteColor;
+                width: 100%;
+            }
+        }
         ul {
+            @include lg(display, block);
+            display: none;
             margin: 0;
             padding: 0;
             li {
@@ -130,28 +165,24 @@
         bottom: 0;
     }
     span {
+        @include lg(background-color, $mainColor);
         position: absolute;
         top: calc(50% - 1px);
         left: 0;
         width: 80%;
         height: 2px;
         transition: all 300ms ease;
-        background-color: $mainColor;
+        background-color: $whiteColor;
     }
     &:before, &:after {
+        @include lg(background-color, $mainColor);
         content: "";
         display: block;
         position: absolute;
         width: 100%;
         height: 2px;
         transition: all 300ms ease;
-        background-color: $mainColor;
-    }
-    &:hover {
-        cursor: pointer;
-        span, &:before, &:after {
-            background-color: $whiteColor;
-        }
+        background-color: $whiteColor;
     }
 }
 .icon_search {
@@ -161,6 +192,8 @@
     left: 20px;
 }
 .search {
+    @include lg(display, block);
+    display: none;
     .single_block {
         box-sizing: border-box;
         position: relative;

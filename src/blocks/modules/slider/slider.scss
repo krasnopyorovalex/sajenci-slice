@@ -28,22 +28,25 @@
                     background-color: rgba(0, 0, 0, 0.2);
                 }
                 .text_field {
+                    @include lg(top, 35%);
+                    box-sizing: border-box;
                     position: absolute;
                     z-index: 100;
-                    top: 35%;
+                    top: 10%;
                     right: 3rem;
                     left: 3rem;
-                    font-family: "Roboto Condensed", serif;
                     line-height: normal;
                     text-align: center;
                     color: $whiteColor;
+                    white-space: normal;
                     &-title {
-                        font-size: rem(30);
+                        @include lg(font-size, rem(30));
+                        font-size: rem(18);
                     }
                     &-body {
-                        font-size: rem(22);
                         .btn_more {
-                            margin: 1.5rem 0 0 0;
+                            @include lg(margin, 1.5rem 0 0 0);
+                            margin: .5rem 0 0 0;
                         }
                     }
                 }
@@ -94,15 +97,6 @@
     font-weight: 600;
     color: $btnMoreColor;
     background: $whiteColor;
-    svg {
-        position: absolute;
-        top: 13px;
-        left: 20px;
-        width: 14px;
-        height: 14px;
-        transition: all 300ms ease;
-        fill: $btnMoreColor;
-    }
     &:hover {
         cursor: pointer;
         background-color: $sliderArrowsColor;
@@ -111,5 +105,14 @@
             fill: $whiteColor;
             right: 18px;
         }
+    }
+    svg {
+        position: absolute;
+        top: 13px;
+        left: 20px;
+        width: 14px;
+        height: 14px;
+        transition: all 300ms ease;
+        fill: $btnMoreColor;
     }
 }

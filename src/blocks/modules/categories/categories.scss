@@ -1,8 +1,27 @@
 .categories {
     background-color: $whiteColor;
-    ul {
+    //&_menu {
+    //    @include lg(display, none);
+    //    display: flex;
+    //    align-items: center;
+    //    padding: .8rem 1.2rem .8rem 1.5rem;
+    //    text-transform: uppercase;
+    //    font-weight: 700;
+    //    border-bottom: 1px solid $borderSelect;
+    //    .btn_toggle {
+    //        margin: 0 0 0 auto;
+    //        &:hover {
+    //            span, &:before, &:after {
+    //                background-color: $mainColor;
+    //            }
+    //        }
+    //    }
+    //}
+    > ul {
+        @include lg(display, block);
+        display: none;
         list-style: none;
-        > li {
+        li {
             position: relative;
             a {
                 box-sizing: border-box;
@@ -49,18 +68,35 @@
                 border-top: 1px solid $borderSelect;
             }
             ul {
+                @include lg(display, block);
+                display: none;
                 margin: 0;
+                list-style: none;
+                padding: 0;
                 border-top: 1px solid $borderSelect;
                 li {
                     a {
+                        box-sizing: border-box;
+                        position: relative;
+                        padding: .5rem 1.2rem .5rem 2.5rem;
                         font-size: rem(14);
-                        padding: .8rem 1.2rem .8rem 2.5rem;
                         &:before {
-                            top: 50%;
+                            top: 20px;
                             left: 1.5rem;
                             width: 6px;
                             height: 2px;
                             background-color: $sliderArrowsColor;
+                        }
+                    }
+                    & + li {
+                        border-top: 1px solid $borderSelect;
+                    }
+                    &.active > a {
+                        &:after {
+                            top: 14px;
+                        }
+                        &:before {
+                            top: 20px;
                         }
                     }
                 }
