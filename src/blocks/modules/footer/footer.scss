@@ -1,18 +1,6 @@
 footer {
-    background-image: url("../img/leaf.jpg");
-    background-repeat: repeat;
-    position: relative;
     padding: 2rem 0 1rem 0;
     color: $whiteColor;
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(150, 105, 76, .9);
-    }
     .row {
         align-items: flex-start;
     }

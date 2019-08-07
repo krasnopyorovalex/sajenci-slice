@@ -139,8 +139,6 @@ section {
 }
 .title {
     font-size: rem(30);
-    //text-align: center;
-    font-family: "Roboto Condensed", serif;
 }
 .center {
     text-align: center;
@@ -148,6 +146,22 @@ section {
 button::-moz-focus-inner, button {
     outline: none;
     border: 0;
+}
+.with_leaf {
+    background-image: url("../img/leaf.jpg");
+    background-repeat: repeat;
+    position: relative;
+    z-index: 110;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(150, 105, 76, .9);
+        z-index: -1;
+    }
 }
 .debug {
     z-index: 200;

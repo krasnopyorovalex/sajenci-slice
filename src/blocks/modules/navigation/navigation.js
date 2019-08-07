@@ -1,10 +1,57 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector(".box_catalog");
+    const timeDuration = 300;
+    const hamburger = document.querySelector(".box_catalog .btn_toggle");
+    const catalog = document.querySelector(".box_catalog .btn");
     const list = document.querySelector(".box_catalog-list");
 
-    if (hamburger) {
-        hamburger.addEventListener('click', function() {
-            slideToggle(list, 300);
+    if (hamburger && catalog) {
+        hamburger.addEventListener('click', () => {
+            return slideToggle(list, timeDuration);
+        });
+
+        catalog.addEventListener('click', () => {
+            return slideToggle(list, timeDuration);
+        });
+
+        list.addEventListener('click', (event) => {
+            let target = event.target;
+
+            if (target.tagName === 'SPAN' || target.tagName === 'I') {
+                let ul = target.closest('li').querySelector('ul');
+                if (ul) {
+                    return slideToggle(ul, timeDuration);
+                }
+            }
+        });
+    }
+
+    const menuBtn = document.querySelector(".navigation nav .btn_toggle");
+    const menu = document.querySelector(".navigation nav ul");
+    const closeBtn = document.querySelector(".navigation .close");
+
+    if (menuBtn) {
+        const hideMenu = () => {
+            slideUp(menu, timeDuration);
+            window.setTimeout( () => {
+                menu.classList.remove("is_open");
+            }, timeDuration);
+            return closeBtn.classList.remove("is_open");
+        };
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.add("is_open");
+            closeBtn.classList.add("is_open");
+            return slideDown(menu, timeDuration);
+        });
+
+        closeBtn.addEventListener('click', () => {
+            return hideMenu();
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth >= 768) {
+                return hideMenu();
+            }
         });
     }
 });

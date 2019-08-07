@@ -57,24 +57,13 @@ header {
             @include sm(font-size, rem(16));
             @include lg(margin, 0);
             display: block;
-            position: relative;
-            z-index: 10;
             margin: 0 0 0 auto;
             padding: 5px 30px 5px 10px;
             background-color: $mainBg;
             border-radius: 25px;
             color: #ffffff;
-            background-image: url("../img/leaf.jpg");
-            background-repeat: repeat;
-            font-size: rem(14);
+            font-size: 0;
             &:before {
-                content: "";
-                position: absolute;
-                z-index: -1;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
                 border-radius: 25px;
                 background-color: rgba(198, 167, 112, .95);
             }
@@ -97,7 +86,14 @@ header {
             }
         }
         &.phone {
+            @include lg(margin,.5rem 0);
             font-weight: 700;
+            display: block;
+            margin: 0 0 .8rem auto;
+            .icon_box {
+                @include lg(display, inline-block);
+                display: none;
+            }
             span {
                 color: #96694c;
             }

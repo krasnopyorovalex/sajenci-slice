@@ -1,22 +1,5 @@
 .categories {
     background-color: $whiteColor;
-    //&_menu {
-    //    @include lg(display, none);
-    //    display: flex;
-    //    align-items: center;
-    //    padding: .8rem 1.2rem .8rem 1.5rem;
-    //    text-transform: uppercase;
-    //    font-weight: 700;
-    //    border-bottom: 1px solid $borderSelect;
-    //    .btn_toggle {
-    //        margin: 0 0 0 auto;
-    //        &:hover {
-    //            span, &:before, &:after {
-    //                background-color: $mainColor;
-    //            }
-    //        }
-    //    }
-    //}
     > ul {
         @include lg(display, block);
         display: none;
