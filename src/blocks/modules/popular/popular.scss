@@ -216,6 +216,11 @@
         display: none;
         font-size: rem(13);
     }
+    select {
+        border: 1px solid $borderSelect;
+        background-color: $whiteColor;
+        outline: none;
+    }
     &.is_sent {
         .btn {
             color: transparent;

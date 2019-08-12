@@ -25,39 +25,6 @@
         width: auto;
         margin: 1rem auto 0;
     }
-    .single_block {
-        @include lg(width, 100%);
-        display: inline-block;
-        width: 50%;
-        margin: 0;
-        .count {
-            display: inline-block;
-            width: auto;
-            border: none;
-            padding: 6px 0;
-        }
-        div {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            border: 1px solid rgba(84, 175, 58, 0.5);
-            line-height: 30px;
-            vertical-align: middle;
-            text-align: center;
-            &.minus {
-                margin: 0 .5rem 0 0;
-            }
-            &.plus {
-                margin: 0 0 0 .5rem;
-            }
-            &.minus, &.plus {
-                font-size: rem(24);
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-        }
-    }
     &-price {
         @include lg(width, 100%);
         width: 50%;
@@ -67,6 +34,36 @@
             font-weight: 700;
             font-size: rem(20);
             color: $advantageColor;
+        }
+    }
+}
+.single_block.counter {
+    margin: 0;
+    .count {
+        display: inline-block;
+        width: auto;
+        border: none;
+        padding: 6px 0;
+    }
+    div {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 1px solid rgba(84, 175, 58, 0.5);
+        line-height: 30px;
+        vertical-align: middle;
+        text-align: center;
+        &.minus {
+            margin: 0 .5rem 0 0;
+        }
+        &.plus {
+            margin: 0 0 0 .5rem;
+        }
+        &.minus, &.plus {
+            font-size: rem(24);
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 }

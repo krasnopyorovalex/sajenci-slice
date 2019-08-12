@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         window.addEventListener("resize", () => {
-            if (window.innerWidth >= 768) {
+            if (menu.className === 'is_open' && window.innerWidth >= 768) {
                 return hideMenu();
             }
         });

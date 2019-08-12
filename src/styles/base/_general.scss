@@ -74,6 +74,14 @@ figure {
     @include col();
     @include size(12);
 }
+.col-11 {
+    @include col();
+    @include size(11);
+}
+.col-10 {
+    @include col();
+    @include size(10);
+}
 .col-9 {
     @include col();
     @include size(12);
