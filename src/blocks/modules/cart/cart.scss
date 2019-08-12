@@ -1,0 +1,94 @@
+.cart {
+    &_items {
+        &-item {
+            @include lg(flex-wrap, nowrap);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 1rem 0 1rem 0;
+            > div {
+                width: 100%;
+                text-align: center;
+            }
+            &-img {
+                line-height: 0;
+                img {
+                    @include lg(max-width, 120px);
+                    max-width: 200px;
+                }
+            }
+            &-actions {
+                svg {
+                    width: 22px;
+                    height: 22px;
+                    fill: $mainColor;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            & + .cart_items-item {
+                border-top: 1px solid $borderSelect;
+            }
+        }
+    }
+    &_total {
+        padding: .5rem 2rem;
+        border-top: 1px solid $borderSelect;
+        .title {
+            font-size: rem(22);
+            display: inline-block;
+        }
+        &-sum {
+            display: inline-block;
+            .price {
+                text-align: left;
+                span {
+                    font-size: rem(22);
+                }
+            }
+        }
+    }
+}
+.white {
+    background-color: $whiteColor;
+}
+.with_border {
+    border: 1px solid $borderSelect;
+}
+.check_order {
+    margin: 2rem 0 0 0;
+    padding: 1rem;
+    .title {
+        margin: 0 0 .5rem 0;
+    }
+    &-body {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .single_block {
+            box-sizing: border-box;
+            margin: 1rem 0 0;
+            padding: 0 .4rem;
+            &.half {
+                @include md(width,50%);
+                width: 100%;
+            }
+            &.delivery {
+                label {
+                    display: block;
+                    font-size: rem(18);
+                    width: 100%;
+                    margin: 0 0 1rem 0;
+                }
+                select {
+                    box-sizing: border-box;
+                    display: inline-block;
+                    width: 100%;
+                    border: 1px solid rgba(84, 175, 58, .5);
+                    padding: 16px 16px;
+                }
+            }
+        }
+    }
+}
