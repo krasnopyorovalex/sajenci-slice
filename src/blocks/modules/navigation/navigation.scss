@@ -16,9 +16,6 @@
         font-weight: 700;
         text-transform: uppercase;
         background-color: $btnBgCatalog;
-        &:hover {
-            cursor: pointer;
-        }
         .btn {
             @include lg(color, $mainColor);
             @include lg(order, 0);
@@ -28,6 +25,9 @@
         .btn_toggle {
             @include lg(margin, 0 0 0 auto);
             margin: 0 auto 0 0;
+            &:hover {
+                cursor: pointer;
+            }
         }
         &-list {
             @include lg(top,3.5rem);
@@ -67,6 +67,9 @@
                         right: 0;
                         padding: .5em 1em;
                         border-left: $borderCatalogList;
+                        &:hover {
+                            cursor: pointer;
+                        }
                     }
                     ul {
                         display: none;

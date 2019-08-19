@@ -1,0 +1,36 @@
+.login {
+    margin: 0;
+    padding: .1rem 0;
+    background-color: rgba(150, 105, 76, 0.9);
+    &_box {
+        ul {
+            margin: 0;
+            padding: 0;
+            text-align: right;
+            li {
+                display: inline-block;
+                vertical-align: middle;
+                & + li {
+                    margin: 0 0 0 1rem;
+                }
+                a {
+                    display: flex;
+                    align-items: center;
+                    font-size: rem(15);
+                    color: $whiteColor;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    svg {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        fill: $whiteColor;
+        margin: 0 .3rem 0 0;
+    }
+}

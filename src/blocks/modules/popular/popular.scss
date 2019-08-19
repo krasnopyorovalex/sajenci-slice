@@ -170,6 +170,10 @@
         }
         &-image {
             margin: 0 10px 0 0;
+            img {
+                @include lg(width, 110px);
+                width: 100%;
+            }
         }
         &-preview {
             .name {
@@ -238,6 +242,9 @@
             line-height: normal;
             padding-left: 30px;
             text-align: left;
+            &:hover {
+                cursor: pointer;
+            }
             &:after {
                 @include sprite($check);
                 content: "";

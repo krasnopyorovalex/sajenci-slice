@@ -53,6 +53,9 @@
         line-height: 30px;
         vertical-align: middle;
         text-align: center;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         &.minus {
             margin: 0 .5rem 0 0;
         }
